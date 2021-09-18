@@ -5,9 +5,9 @@
 
 <body>
 
-<!--- <form action="get.php">
+<!--- <form action="get.php" onsubmit="jsFunctionName()">
 --->
-<form method="post">
+<form method="POST" action="get.php">
   <div class="form-group row">
     <label for="sipnumber" class="col-sm-2 col-form-label">SIP Number</label>
     <div class="col-sm-10">
@@ -18,7 +18,7 @@
   <div class="form-group row">
     <label for="sippassword" class="col-sm-2 col-form-label">Password</label>
     <div class="col-sm-10">
-      <input type="password" class="form-control" id="sippassword" placeholder="*******">
+      <input type="password" class="form-control" id="sippassword" placeholder="*******" name="sippassword">
     </div>
   </div>
   
@@ -65,7 +65,7 @@
   </div>
   <div class="form-group row">
     <div class="col-sm-10">
-      <button type="submit" class="btn btn-primary"  name="send">Wyślij</button>
+      <button type="submit" class="btn btn-primary"  name="send" >Wyślij</button>
     </div>
   </div>
 </form>
@@ -74,32 +74,5 @@
 
 
 
-
 </html>
 
-
- <?php
-/*
-        if(array_key_exists('send', $_POST)) {
-            button1();
-        }
-        else if(array_key_exists('button2', $_POST)) {
-            button2();
-        }
-        function button1() {
-            echo "This is Button1 that is selected";
-        }
-        function button2() {
-            echo "This is Button2 that is selected";
-        }
-    
-      */
-	  
-        if(isset($_POST['send'])) {
-            echo "This is Button1 that is selected";
-        }
-        if(isset($_POST['button2'])) {
-            echo "This is Button2 that is selected";
-        }
-		
-    ?>
